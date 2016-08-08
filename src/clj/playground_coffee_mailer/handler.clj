@@ -3,6 +3,7 @@
             [playground-coffee-mailer.routes.services :refer [service-routes]]
             [compojure.route :as route]
             [playground-coffee-mailer.env :refer [defaults]]
+            [playground-coffee-mailer.routes.api :refer [api-routes]]
             [mount.core :as mount]
             [playground-coffee-mailer.middleware :as middleware]))
 
@@ -13,6 +14,7 @@
 (def app-routes
   (routes
     #'service-routes
+    #'api-routes
     (route/not-found
       "page not found")))
 
