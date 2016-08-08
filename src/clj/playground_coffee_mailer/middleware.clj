@@ -26,5 +26,5 @@
             (assoc-in [:security :anti-forgery] false)
             (dissoc :session)))
       (wrap-cors
-        :access-control-allow-origin [#"http://dev.playgroundcoffeeshop.com" #"http://playgroundcoffeeshop.com"]
+        :access-control-allow-origin [#".+"]
         :access-control-allow-methods [:get :put :post :delete])))
